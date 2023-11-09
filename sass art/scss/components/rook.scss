@@ -1,0 +1,23 @@
+@use 'bootje';
+@use 'reset';
+@use '../abstract/colors.scss';
+
+
+@extend 'reset';
+
+.canvas{
+    background: colors.$blue;
+    .rook{
+        position: relative;
+        background: colors.$grey;
+        width: 30vw;
+        height: 30vh;
+        opacity: 0.3; 
+        box-shadow: 10px 10px 5px 12px colors.$grey;
+        z-index: -1;
+    }
+    .rook2{
+        @extend .rook;
+        padding: 2px;
+    }
+}

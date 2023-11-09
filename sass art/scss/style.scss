@@ -1,0 +1,15 @@
+@use 'abstract/colors.scss';
+@use 'components/bootje.scss';
+@use 'components/raampje.scss';
+@use 'components/barrel.scss';
+@use 'components/rook.scss';
+
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 40rem;
+    height: 40rem;
+}

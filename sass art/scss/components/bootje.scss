@@ -1,0 +1,52 @@
+@use '../abstract/colors';
+
+@mixin center{
+	justify-content: center;
+    align-items: center;
+}
+
+.canvas{
+	display: flex;
+	flex-direction: column-reverse;
+	@include center;
+	width: 60rem;
+	height: 60rem;
+}
+
+.huisje{
+    width: 30rem;
+    height: 20%;
+    display: flex;
+    @include center;
+    background: colors.$red;
+	clip-path: polygon(0 35%, 100% 35%, 72% 67%, 30% 67%);
+	gap: 10px;
+}
+
+.arrow_box {
+	position: relative;
+	background: colors.$red;
+    height: 40%;
+    width: 29%;
+    border-radius: 50%;
+}
+.arrow_box:after{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height:20px;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -74px;
+    width: 30%;
+    height: 15%;
+}
